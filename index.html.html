@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciclo de Benefícios 2026 | iFood</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f7f7f7; }
+        .ifood-red { color: #ea1d2c; }
+        .bg-ifood-red { background-color: #ea1d2c; }
+        .timeline-line { position: absolute; left: 20px; top: 0; bottom: 0; width: 2px; background: #e5e7eb; z-index: 0; }
+        .card-benefit { transition: transform 0.2s, box-shadow 0.2s; cursor: pointer; }
+        .card-benefit:hover { transform: translateY(-5px); box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); }
+        .modal { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 50; align-items: center; justify-content: center; }
+        .modal.active { display: flex; }
+        .new-badge { background: #34d399; color: white; font-size: 10px; padding: 2px 6px; border-radius: 10px; text-transform: uppercase; font-weight: bold; }
+    </style>
+</head>
+<body class="pb-20">
+
+    <header class="bg-white shadow-sm border-b-4 border-red-600 py-8 px-4 text-center">
+        <h1 class="text-3xl md:text-5xl font-extrabold text-gray-800 italic">ELEIÇÃO GERAL <span class="ifood-red">2026</span></h1>
+        <p class="text-xl text-gray-600 mt-2 font-light tracking-widest">CICLO DE BENEFÍCIOS</p>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-4 mt-10">
+        
+        <section class="bg-white rounded-3xl p-8 shadow-lg border border-gray-100 mb-10">
+            <div class="flex items-center mb-6">
+                <div class="bg-blue-100 p-3 rounded-2xl mr-4"><i class="fas fa-rocket text-blue-600 text-2xl"></i></div>
+                <h2 class="text-2xl font-bold text-gray-800">Uma novidade fresquinha: bem-vindo ao Ciclo!</h2>
+            </div>
+            <p class="text-gray-600 leading-relaxed text-lg">
+                Sabe aquele momento do ano que a gente chamava de "eleição de benefícios"? Pois é, ele ganhou um novo nome – e muito mais significado! 
+                A partir de agora, é <strong>Ciclo de Benefícios. 💙</strong>
+            </p>
+            <div class="grid md:grid-cols-2 gap-4 mt-6">
+                <div class="flex items-start space-x-3 p-3 bg-gray-50 rounded-xl">
+                    <span class="text-blue-500">✨</span> <p class="text-sm">Revisar tudo o que você tem disponível</p>
+                </div>
+                <div class="flex items-start space-x-3 p-3 bg-gray-50 rounded-xl">
+                    <span class="text-blue-500">🔍</span> <p class="text-sm">Relembrar benefícios esquecidos</p>
+                </div>
+                <div class="flex items-start space-x-3 p-3 bg-gray-50 rounded-xl">
+                    <span class="text-blue-500">🆕</span> <p class="text-sm">Conhecer as novidades que preparamos</p>
+                </div>
+                <div class="flex items-start space-x-3 p-3 bg-gray-50 rounded-xl">
+                    <span class="text-blue-500">🎯</span> <p class="text-sm">Moldar seus benefícios do seu jeito</p>
+                </div>
+            </div>
+        </section>
+
+        <a href="https://liviapaula-ux.github.io/mockupsimulador/" target="_blank" class="block bg-gradient-to-r from-red-500 to-red-700 rounded-3xl p-6 text-white mb-10 text-center transform hover:scale-105 transition-all shadow-xl">
+            <i class="fas fa-calculator text-4xl mb-3"></i>
+            <h3 class="text-2xl font-bold">Simulador do Pacote de Benefícios</h3>
+            <p class="opacity-90">Clique aqui para simular suas escolhas em tempo real!</p>
+        </a>
+
+        <section class="mb-16">
+            <h2 class="text-2xl font-bold text-gray-800 mb-8 flex items-center">
+                <i class="fas fa-calendar-alt ifood-red mr-3"></i> Linha do Tempo
+            </h2>
+            <div class="relative ml-4">
+                <div class="timeline-line"></div>
+                
+                <div class="relative pl-12 mb-8">
+                    <div class="absolute left-0 w-10 h-10 bg-white border-2 border-gray-300 rounded-full flex items-center justify-center z-10"><i class="fas fa-envelope-open text-gray-400"></i></div>
+                    <p class="text-xs text-gray-400 font-bold uppercase">Início</p>
+                    <h4 class="font-bold">01/06 - Cartas promoções e méritos</h4>
+                    <span class="text-[10px] bg-gray-100 px-2 py-1 rounded">Exclusivo Liderança</span>
+                </div>
+
+                <div class="relative pl-12 mb-8">
+                    <div class="absolute left-0 w-10 h-10 bg-white border-2 border-gray-300 rounded-full flex items-center justify-center z-10"><i class="fas fa-user-check text-gray-400"></i></div>
+                    <p class="text-[9px] text-blue-500 font-bold">1 DIA DEPOIS</p>
+                    <h4 class="font-bold">02/06 - Cartas AVD</h4>
+                    <span class="text-[10px] text-gray-500 italic">Foodlovers recebem suas cartas</span>
+                </div>
+
+                <div class="relative pl-12 mb-8">
+                    <div class="absolute left-0 w-10 h-10 bg-white border-2 border-gray-300 rounded-full flex items-center justify-center z-10"><i class="fas fa-comments text-gray-400"></i></div>
+                    <p class="text-[9px] text-blue-500 font-bold">1 DIA DEPOIS</p>
+                    <h4 class="font-bold">03 a 10/06 - Feedback Liderança</h4>
+                </div>
+
+                <div class="relative pl-12 mb-8">
+                    <div class="absolute left-0 w-10 h-10 bg-red-600 rounded-full flex items-center justify-center z-10 shadow-lg shadow-red-200"><i class="fas fa-star text-white"></i></div>
+                    <p class="text-[9px] text-red-600 font-bold italic">O MOMENTO CHEGOU</p>
+                    <h4 class="font-bold text-red-600 text-lg uppercase">10/06 - Início do Ciclo de Benefícios</h4>
+                </div>
+
+                <div class="relative pl-12 mb-8">
+                    <div class="absolute left-0 w-10 h-10 bg-red-100 border-2 border-red-600 rounded-full flex items-center justify-center z-10"><i class="fas fa-building text-red-600"></i></div>
+                    <p class="text-[9px] text-blue-500 font-bold">1 DIA DEPOIS</p>
+                    <h4 class="font-bold text-red-600">11/06 - Jornada de Benefícios (Osasco)</h4>
+                </div>
+
+                <div class="relative pl-12 mb-8">
+                    <div class="absolute left-0 w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center z-10"><i class="fas fa-clock text-white"></i></div>
+                    <p class="text-[9px] text-blue-500 font-bold">6 DIAS DEPOIS</p>
+                    <h4 class="font-bold text-red-600">17/06 - Encerramento (23h59)</h4>
+                </div>
+
+                <div class="relative pl-12 mb-8">
+                    <div class="absolute left-0 w-10 h-10 bg-green-500 rounded-full flex items-center justify-center z-10"><i class="fas fa-check text-white"></i></div>
+                    <p class="text-[9px] text-blue-500 font-bold">13 DIAS DEPOIS</p>
+                    <h4 class="font-bold">30/06 - Pagamento iFood Benefícios</h4>
+                    <p class="text-xs text-green-600 font-semibold">Valores atualizados!</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 uppercase tracking-tight">Fase 1: Eleição de Benefícios</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="card-benefit bg-red-50 border border-red-100 p-5 rounded-2xl" onclick="openModal('Saúde', 'Pode realizar upgrade e downgrade de acordo com a elegibilidade. Permite inclusão ou exclusão de dependentes.')">
+                    <i class="fas fa-heartbeat text-red-500 mb-3"></i>
+                    <h5 class="font-bold text-gray-800">Plano de Saúde</h5>
+                </div>
+                <div class="card-benefit bg-red-50 border border-red-100 p-5 rounded-2xl" onclick="openModal('Odonto', 'Pode realizar upgrade e downgrade de acordo com a elegibilidade. Permite inclusão ou exclusão de dependentes.')">
+                    <i class="fas fa-tooth text-red-500 mb-3"></i>
+                    <h5 class="font-bold text-gray-800">Plano Odontológico</h5>
+                </div>
+                <div class="card-benefit bg-red-50 border border-red-100 p-5 rounded-2xl" onclick="openModal('Seguro de Vida', 'NOVIDADE: Novos múltiplos, oportunidades e novo fornecedor! Proteção ampliada para você.')">
+                    <div class="flex justify-between">
+                        <i class="fas fa-shield-alt text-red-500 mb-3"></i>
+                        <span class="new-badge">Novo <i class="fas fa-star text-[8px]"></i></span>
+                    </div>
+                    <h5 class="font-bold text-gray-800">Seguro de Vida</h5>
+                </div>
+                <div class="card-benefit bg-red-50 border border-red-100 p-5 rounded-2xl" onclick="openModal('VA / VR', 'Reajuste já incorporado em seus pontos. Fique à vontade para revisar a distribuição entre as carteiras.')">
+                    <i class="fas fa-utensils text-red-500 mb-3"></i>
+                    <h5 class="font-bold text-gray-800">VA / VR</h5>
+                </div>
+
+                <div class="card-benefit bg-orange-50 border border-orange-100 p-5 rounded-2xl" onclick="openModal('Plano Pet', 'NOVIDADE: Temos parceiros novos! Agora você pode escolher entre Meu Pet e Pet Love para cuidar do seu melhor amigo.')">
+                    <div class="flex justify-between">
+                        <i class="fas fa-paw text-orange-500 mb-3"></i>
+                        <span class="new-badge" style="background: #f97316;">Novo <i class="fas fa-star text-[8px]"></i></span>
+                    </div>
+                    <h5 class="font-bold text-gray-800">Plano Pet</h5>
+                </div>
+                <div class="card-benefit bg-orange-50 border border-orange-100 p-5 rounded-2xl" onclick="openModal('Viagens', 'Parceria com a Decolar! Agora você pode acumular e utilizar pontos para suas próximas férias.')">
+                    <i class="fas fa-plane text-orange-500 mb-3"></i>
+                    <h5 class="font-bold text-gray-800">Viagens</h5>
+                </div>
+                <div class="card-benefit bg-orange-50 border border-orange-100 p-5 rounded-2xl" onclick="openModal('Reembolso Flex', 'Pago diretamente no saldo livre do iFood Benefícios. Novas categorias: Livros, Material Escolar, Massagens, SPA, Brinquedos, Itens Esportivos e Inscrições em Campeonatos.')">
+                    <div class="flex justify-between">
+                        <i class="fas fa-receipt text-orange-500 mb-3"></i>
+                        <span class="new-badge" style="background: #f97316;">Novo <i class="fas fa-star text-[8px]"></i></span>
+                    </div>
+                    <h5 class="font-bold text-gray-800">Reembolso Flex</h5>
+                </div>
+                <div class="card-benefit bg-orange-50 border border-orange-100 p-5 rounded-2xl" onclick="openModal('Vale Cultura', 'Cinema, shows, teatro e os streamings que não vivemos sem! Tudo com seus pontos.')">
+                    <i class="fas fa-film text-orange-500 mb-3"></i>
+                    <h5 class="font-bold text-gray-800">Vale Cultura</h5>
+                </div>
+
+                <div class="card-benefit bg-blue-50 border border-blue-100 p-5 rounded-2xl md:col-span-3" onclick="openModal('Novidades em Pontos', 'Agora você pode alocar seus pontos em: Previdência Privada, Plano de Assistência Familiar (pais e avós) e Seguro de Vida para Agregados.')">
+                    <div class="flex items-center space-x-4">
+                        <i class="fas fa-piggy-bank text-blue-500 text-2xl"></i>
+                        <div>
+                            <h5 class="font-bold text-gray-800">Alocação de Pontos Extra</h5>
+                            <p class="text-xs text-blue-600 italic">Previdência, Assistência Pais/Avós e Agregados</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="grid md:grid-cols-2 gap-6">
+            <section class="bg-white p-6 rounded-3xl shadow-md border-t-4 border-orange-400">
+                <h3 class="font-bold text-xl mb-4 text-orange-600 italic">FASE 2) Novas Parcerias</h3>
+                <ul class="space-y-3 text-sm text-gray-600">
+                    <li><strong><i class="fas fa-pills mr-2"></i>Suporte Farmacêutico:</strong> Melhores condições via iDoc.</li>
+                    <li><strong><i class="fas fa-dumbbell mr-2"></i>Wellhub & Total Pass:</strong> Novas opções de academias.</li>
+                    <li><strong><i class="fas fa-balance-scale mr-2"></i>Leggal:</strong> Condições exclusivas jurídicas.</li>
+                    <li><strong><i class="fas fa-chart-line mr-2"></i>Stay:</strong> Previdência privada com opções incríveis.</li>
+                    <li><strong><i class="fas fa-tags mr-2"></i>New Value:</strong> Nosso agente de descontos.</li>
+                </ul>
+            </section>
+
+            <section class="bg-white p-6 rounded-3xl shadow-md border-t-4 border-red-600">
+                <h3 class="font-bold text-xl mb-4 text-red-600 italic">FASE 3) Jornada de Benefícios</h3>
+                <div class="flex items-center bg-red-50 p-4 rounded-2xl">
+                    <span class="text-3xl mr-4">🗓️</span>
+                    <p class="text-sm"><strong>11/06:</strong> Encontro presencial com fornecedores para tirar dúvidas e explorar personalizações.</p>
+                </div>
+            </section>
+        </div>
+
+    </main>
+
+    <footer class="mt-20 bg-gray-900 text-white py-12 px-4 text-center">
+        <p class="text-sm opacity-50 mb-4 tracking-tighter uppercase">Foco no Foodlover</p>
+        <h4 class="text-lg font-semibold italic">Benefícios que acompanham sua jornada. 🚀</h4>
+    </footer>
+
+    <div id="modal" class="modal px-4" onclick="closeModal()">
+        <div class="bg-white rounded-3xl p-8 max-w-md w-full shadow-2xl" onclick="event.stopPropagation()">
+            <h3 id="modalTitle" class="text-2xl font-bold ifood-red mb-4 italic"></h3>
+            <p id="modalContent" class="text-gray-600 leading-relaxed"></p>
+            <button onclick="closeModal()" class="mt-8 w-full bg-gray-800 text-white py-3 rounded-xl font-bold hover:bg-black transition-colors">Fechar</button>
+        </div>
+    </div>
+
+    <script>
+        function openModal(title, text) {
+            document.getElementById('modalTitle').innerText = title;
+            document.getElementById('modalContent').innerText = text;
+            document.getElementById('modal').classList.add('active');
+        }
+        function closeModal() {
+            document.getElementById('modal').classList.remove('active');
+        }
+    </script>
+</body>
+</html>
